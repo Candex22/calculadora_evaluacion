@@ -1,0 +1,99 @@
+:root {
+    --bg-dark: #0f0a19;
+    --bg-light: #f1f1f8;
+    --text-light: #ffffff;
+    --text-dark: #121212;
+    --error-color: #ff3e3e;
+}
+
+.light-mode {
+    --bg-primary: var(--bg-light);
+    --bg-secondary: #8ecde0;
+    --bg-tertiary: #61afc7;
+    --bg-especial: #3f8ca3;
+    --text-primary: var(--text-dark);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: rgba(0, 0, 0, 0.2);
+    --glow-color: rgba(11, 92, 223, 0.3);
+}
+
+.dark-mode {
+    --bg-primary: var(--bg-dark);
+    --bg-secondary: rgba(20, 20, 40, 0.7);
+    --bg-tertiary: rgba(10, 10, 25, 0.6);
+    --bg-especial: rgba(15, 15, 48, 0.6);
+    --text-primary: var(--text-light);
+    --shadow-color: rgba(157, 78, 221, 0.3);
+    --border-color: rgba(157, 78, 221, 0.3);
+    --glow-color: rgba(157, 78, 221, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-primary); /* Cambia el color de fondo */
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: var(--text-primary); /* Cambia el color del texto */
+}
+
+.calculator {
+    margin-top: 50px;
+    background-color: var(--bg-secondary);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.display {
+    margin-bottom: 10px;
+}
+
+.display input {
+    width: 100%;
+    padding: 10px;
+    font-size: 2em;
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1.5em; /* Cambia el tamaño de la fuente */
+    color: #fff;
+    background-color: var(--bg-tertiary); /* Cambia el color del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--shadow-color); /* Cambia el color del botón al pasar el cursor */
+}
+
+button:active {
+    transform: translateY(2px); /* Añade efecto al presionar */
+}
+button:nth-child(18) {
+    background-color: var(--bg-especial); /* Cambia el color del botón del igual */
+    color: #fff;
+}
