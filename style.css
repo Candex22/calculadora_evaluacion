@@ -10,7 +10,9 @@
     --bg-primary: var(--bg-light);
     --bg-secondary: #8ecde0;
     --bg-tertiary: #61afc7;
-    --bg-especial: #3f8ca3;
+    --bg-especial: #083d4d;
+    --bg-especialuno: #1f6175;
+    --bg-tri: #085168;
     --text-primary: var(--text-dark);
     --shadow-color: rgba(0, 0, 0, 0.1);
     --border-color: rgba(0, 0, 0, 0.2);
@@ -21,7 +23,9 @@
     --bg-primary: var(--bg-dark);
     --bg-secondary: rgba(20, 20, 40, 0.7);
     --bg-tertiary: rgba(10, 10, 25, 0.6);
-    --bg-especial: rgba(15, 15, 48, 0.6);
+    --bg-especial: rgba(36, 36, 94, 0.6);
+    --bg-especialuno: rgba(25, 25, 82, 0.6);
+    --bg-tri: rgba(28, 28, 82, 0.6);
     --text-primary: var(--text-light);
     --shadow-color: rgba(157, 78, 221, 0.3);
     --border-color: rgba(157, 78, 221, 0.3);
@@ -36,7 +40,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--bg-primary); /* Cambia el color de fondo */
+    background-color: var(--bg-primary);
+    /* Cambia el color de fondo */
 }
 
 .container {
@@ -47,7 +52,8 @@ body {
 }
 
 h1 {
-    color: var(--text-primary); /* Cambia el color del texto */
+    color: var(--text-primary);
+    /* Cambia el color del texto */
 }
 
 .calculator {
@@ -78,22 +84,39 @@ h1 {
 
 button {
     padding: 10px;
-    font-size: 1.5em; /* Cambia el tamaño de la fuente */
+    font-size: 1.5em;
+    /* Cambia el tamaño de la fuente */
     color: #fff;
-    background-color: var(--bg-tertiary); /* Cambia el color del botón */
+    background-color: var(--bg-tertiary);
+    /* Cambia el color del botón */
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: var(--shadow-color); /* Cambia el color del botón al pasar el cursor */
+    background-color: var(--shadow-color);
+    /* Cambia el color del botón al pasar el cursor */
 }
 
 button:active {
     transform: translateY(2px); /* Añade efecto al presionar */
 }
-button:nth-child(18) {
+
+button:nth-child(23) {
     background-color: var(--bg-especial); /* Cambia el color del botón del igual */
+    color: #fff;
+}
+
+button:nth-child(17),button:nth-child(18),
+button:nth-child(19) {
+    background-color: var(--bg-especialuno); /* Cambia el color de los botones de porcetanje, raíz y potencia */
+    color: #fff;
+}
+
+button:nth-child(20),
+button:nth-child(21),
+button:nth-child(22) {
+    background-color: var(--bg-tri); /* Cambia el color de los botones de seno, coseno y tangente */
     color: #fff;
 }

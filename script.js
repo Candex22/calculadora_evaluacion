@@ -25,7 +25,35 @@ function calculate(value) {
         } catch (error) {
             result.value = 'Error'; // Maneja errores en la evaluación
         }
-    } else {
+    } else if (value === '%') {
+        try {
+            result.value = eval(result.value + "/100"); // Divide el valor por 100 para calcular el porcentaje
+        } catch (error) {
+            result.value = 'Error';
+        }
+    } else if (value === 'Math.sqrt(') {
+        result.value += value; // Añade 'Math.sqrt(' al valor del input
+    }
+    else if (value === '**2') {
+        try {
+            result.value = eval(result.value + "**2"); // Evalúa el valor actual elevado a la potencia de 2
+        } catch (error) {
+            result.value = 'Error'; // Maneja cualquier error en la evaluación
+        }
+    }
+    else if (value === 'Math.sin(' || value === 'Math.cos(' || value === 'Math.tan(' || value === 'Math.log(') {
+        result.value += value; // Añade la función trigonométrica seleccionada al input
+    }
+    else if (value === '%') {
+        try {
+            result.value = eval(result.value + "/100"); // Calcula el porcentaje dividiendo por 100
+        } catch (error) {
+            result.value = 'Error'; // Maneja cualquier error en la evaluación
+        }
+    }else if (value === '(' || value === ')'){
+        result.value += value; // Añade parentesis seleccionado al input
+    }
+    else {
         result.value += value; // Añade el valor del botón al input
     }
 }
