@@ -10,11 +10,10 @@
     --bg-primary: var(--bg-light);
     --bg-secondary: #8ecde0;
     --bg-tertiary: #61afc7;
-    --bg-especial: #083d4d;
-    --bg-especialuno: #1f6175;
-    --bg-tri: #085168;
+    --bg-especial: #106c88;
+    --bg-especialuno: #2d8daa;
     --text-primary: var(--text-dark);
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(36, 105, 194, 0.644);
     --border-color: rgba(0, 0, 0, 0.2);
     --glow-color: rgba(11, 92, 223, 0.3);
 }
@@ -22,10 +21,9 @@
 .dark-mode {
     --bg-primary: var(--bg-dark);
     --bg-secondary: rgba(20, 20, 40, 0.7);
-    --bg-tertiary: rgba(10, 10, 25, 0.6);
+    --bg-tertiary: rgba(40, 40, 116, 0.6);
     --bg-especial: rgba(36, 36, 94, 0.6);
-    --bg-especialuno: rgba(25, 25, 82, 0.6);
-    --bg-tri: rgba(28, 28, 82, 0.6);
+    --bg-especialuno: rgba(18, 18, 65, 0.733);
     --text-primary: var(--text-light);
     --shadow-color: rgba(157, 78, 221, 0.3);
     --border-color: rgba(157, 78, 221, 0.3);
@@ -57,19 +55,19 @@ h1 {
 }
 
 .calculator {
-    margin-top: 50px;
+    margin-top: 5%;
     background-color: var(--bg-secondary);
-    border-radius: 5px;
-    padding: 20px;
+    border-radius: 0.5rem;
+    padding: 5%;
 }
 
 .display {
-    margin-bottom: 10px;
+    margin-bottom: 2%;
 }
 
 .display input {
     width: 100%;
-    padding: 10px;
+    padding: 2%;
     font-size: 2em;
     text-align: right;
     border: none;
@@ -78,7 +76,7 @@ h1 {
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;
 }
 
@@ -100,23 +98,56 @@ button:hover {
 }
 
 button:active {
-    transform: translateY(2px); /* Añade efecto al presionar */
+    transform: translateY(2px);
+    /* Añade efecto al presionar */
 }
 
-button:nth-child(23) {
-    background-color: var(--bg-especial); /* Cambia el color del botón del igual */
-    color: #fff;
-}
-
-button:nth-child(17),button:nth-child(18),
-button:nth-child(19) {
-    background-color: var(--bg-especialuno); /* Cambia el color de los botones de porcetanje, raíz y potencia */
-    color: #fff;
-}
-
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(5),
+button:nth-child(6),
+button:nth-child(7),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(13),
+button:nth-child(14),
+button:nth-child(18),
+button:nth-child(19),
 button:nth-child(20),
-button:nth-child(21),
-button:nth-child(22) {
-    background-color: var(--bg-tri); /* Cambia el color de los botones de seno, coseno y tangente */
-    color: #fff;
+button:nth-child(24),
+button:nth-child(25),
+button:nth-child(26),
+button:nth-child(30) {
+    background-color: var(--bg-especialuno);
+}
+
+button:nth-child(29){
+    background-color: var(--bg-especial);
+}
+
+button:nth-child(1):hover,
+button:nth-child(2):hover,
+button:nth-child(3):hover,
+button:nth-child(4):hover,
+button:nth-child(5):hover,
+button:nth-child(6):hover,
+button:nth-child(7):hover,
+button:nth-child(8):hover,
+button:nth-child(12):hover,
+button:nth-child(13):hover,
+button:nth-child(14):hover,
+button:nth-child(18):hover,
+button:nth-child(19):hover,
+button:nth-child(20):hover,
+button:nth-child(24):hover,
+button:nth-child(25):hover,
+button:nth-child(26):hover,
+button:nth-child(30):hover {
+    background-color: var(--glow-color);
+}
+
+button:nth-child(29):hover{
+    background-color: var(--border-color);
 }

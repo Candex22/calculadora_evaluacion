@@ -11,7 +11,7 @@
 
 <body class="light-mode">
     <button class="theme-toggle" id="themeToggle">
-        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
     </button>
     <div class="container">
         <h1>Calculadora básica</h1>
@@ -20,32 +20,42 @@
                 <input type="text" id="result" disabled>
             </div>
             <div class="buttons">
+                <button onclick="calculate('Math.sqrt(')">√</button>
+                <button onclick="calculate('(')">(</button>
+                <button onclick="calculate(')')">)</button>
+                <button onclick="calculate('%')">%</button>
+                <button onclick="deleteLast()">⌫</button>
+                <button onclick="calculate('clear')">C</button>
+
+                <button onclick="calculate('**2')">x²</button>
+                <button onclick="calculate('Math.sin(')">sin</button>
                 <button onclick="calculate('7')">7</button>
                 <button onclick="calculate('8')">8</button>
                 <button onclick="calculate('9')">9</button>
                 <button onclick="calculate('/')">/</button>
+
+                <button onclick="calculate('**3')">x³</button>
+                <button onclick="calculate('Math.cos(')">cos</button>
                 <button onclick="calculate('4')">4</button>
                 <button onclick="calculate('5')">5</button>
                 <button onclick="calculate('6')">6</button>
                 <button onclick="calculate('*')">*</button>
+
+                <button onclick="calculate('**')">x<sup>y</sup></button>
+                <button onclick="calculate('Math.tan(')">tan</button>
                 <button onclick="calculate('1')">1</button>
                 <button onclick="calculate('2')">2</button>
                 <button onclick="calculate('3')">3</button>
                 <button onclick="calculate('-')">-</button>
+
+                <button onclick="music('')">♫</button>
+                <button onclick="calculate('Math.log(')">log</button>
                 <button onclick="calculate('0')">0</button>
                 <button onclick="calculate('.')">.</button>
-                <button onclick="calculate('+')">+</button>
-                <button onclick="calculate('clear')">C</button>
-                <button onclick="calculate('%')">%</button>
-                <button onclick="calculate('Math.sqrt(')">√</button>
-                <button onclick="calculate('**2')">x²</button>
-                <button onclick="calculate('(')">(</button>
-                <button onclick="calculate(')')">)</button>
-                <button onclick="calculate('Math.sin(')">sin</button>
-                <button onclick="calculate('Math.cos(')">cos</button>
-                <button onclick="calculate('Math.tan(')">tan</button>
-                <button onclick="calculate('Math.log(')">log</button>
                 <button onclick="calculate('calculate')">=</button>
+                <button onclick="calculate('+')">+</button>
+
+
             </div>
         </div>
     </div>
